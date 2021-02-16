@@ -74,9 +74,12 @@ function Header(): React.ReactElement {
         <Link href="/blog" passHref>
           <NavLink isActive={router.pathname.startsWith('/blog')}>Blog</NavLink>
         </Link>
-        <Link href="/portfolio" passHref>
-          <NavLink isActive={router.pathname.startsWith('/portfolio')}>Portfolio</NavLink>
-        </Link>
+        <NavLink
+          href="https://danicc.github.io/dae-portfolio/"
+          isActive={router.pathname.startsWith('/portfolio')}
+        >
+          Portfolio
+        </NavLink>
       </Nav>
     </Root>
   )

@@ -53,9 +53,7 @@ function Hero(): JSX.Element {
         Daniel Alberto Esquinazi
       </h1>
       <p>Here I am going to write about Javascript, React and other frontend technologies</p>
-      <Link href="#" passHref>
-        <ButtonLink>Portfolio</ButtonLink>
-      </Link>
+      <ButtonLink href="https://danicc.github.io/dae-portfolio/">Portfolio</ButtonLink>
       <Link href="/blog" passHref>
         <ButtonLink>Blog</ButtonLink>
       </Link>
