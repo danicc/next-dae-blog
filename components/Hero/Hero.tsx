@@ -2,7 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import { FormattedMessage } from 'react-intl'
-import { Logo } from 'components'
+import { Logo } from '../Logo'
+import { LanguageSelector } from '../LanguageSelector'
 
 const Root = styled.div`
   display: flex;
@@ -17,11 +18,19 @@ const Root = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
+  position: relative;
 
   h1 {
     color: rgb(255, 255, 255);
   }
 `
+
+const LanguageSelectorContainer = styled.div`
+  position: absolute;
+  top: 0;
+  margin: 12px 0;
+`
+
 const ButtonLink = styled.a`
   width: 130px;
   display: inline-flex;
@@ -48,6 +57,9 @@ const ButtonLink = styled.a`
 function Hero(): JSX.Element {
   return (
     <Root>
+      <LanguageSelectorContainer>
+        <LanguageSelector />
+      </LanguageSelectorContainer>
       <Logo />
       <h1>
         <FormattedMessage id="hiIAm" />
