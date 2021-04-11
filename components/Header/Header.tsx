@@ -7,6 +7,7 @@ import { Logo } from 'components'
 const Root = styled.header`
   height: 33vh;
   max-height: 300px;
+  min-height: 270px;
   padding: 0.5rem 2rem 1rem;
   background-image: linear-gradient(-185deg, rgba(53, 114, 188, 0.7), rgba(26, 26, 26, 0.9)),
     url('/images/bg.jpg');
@@ -72,7 +73,7 @@ function Header(): React.ReactElement {
           <NavLink isActive={router.pathname === '/'}>Home</NavLink>
         </Link>
         <Link href="/blog" passHref>
-          <NavLink isActive={router.pathname.startsWith('/blog')}>Blog</NavLink>
+          <NavLink isActive={router.pathname === '/blog'}>Blog</NavLink>
         </Link>
         <NavLink
           href="https://danicc.github.io/dae-portfolio/"

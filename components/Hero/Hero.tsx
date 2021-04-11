@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
+import { FormattedMessage } from 'react-intl'
 import { Logo } from 'components'
 
 const Root = styled.div`
@@ -49,10 +50,13 @@ function Hero(): JSX.Element {
     <Root>
       <Logo />
       <h1>
-        Hi. I am <br />
+        <FormattedMessage id="hiIAm" />
+        <br />
         Daniel Alberto Esquinazi
       </h1>
-      <p>Here I am going to write about Javascript, React and other frontend technologies</p>
+      <p>
+        <FormattedMessage id="heroDetail" />
+      </p>
       <ButtonLink href="https://danicc.github.io/dae-portfolio/">Portfolio</ButtonLink>
       <Link href="/blog" passHref>
         <ButtonLink>Blog</ButtonLink>

@@ -8,7 +8,7 @@ import { FormattedMessage } from 'react-intl'
 
 const Root = styled.main`
   display: grid;
-  grid-template-rows: 70vh 1fr;
+  grid-template-rows: auto 1fr;
   ${({ theme }) =>
     css`
       @media (min-width: ${theme.breakpoints.md}) {
@@ -20,6 +20,7 @@ const Root = styled.main`
 
 const Content = styled.div`
   padding: 2rem 1.5rem;
+  overflow: auto;
 
   ${({ theme }) => css`
     @media (min-width: ${theme.breakpoints.md}) {

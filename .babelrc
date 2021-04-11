@@ -1,6 +1,20 @@
 {
-  "presets": ["next/babel"],
+  "presets": [
+    "next/babel"
+  ],
   "plugins": [
-    ["styled-components", { "ssr": true }]
+    [
+      "styled-components",
+      {
+        "ssr": true
+      }
+    ],
+    [
+      "formatjs",
+      {
+        "idInterpolationPattern": "[sha512:contenthash:base64:6]",
+        "ast": true
+      }
+    ]
   ]
 }

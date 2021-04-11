@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Image from 'next/image'
 
 const LogoContainer = styled.div<Props>`
   display: flex;
@@ -21,7 +22,7 @@ type Props = {
 function Logo({ sm }: Props): JSX.Element {
   return (
     <LogoContainer sm={sm}>
-      <img src="/images/logo.png" alt="logo" width="100%" />
+      <Image src="/images/logo.png" alt="logo" width="100%" height="100%" />
     </LogoContainer>
   )
 }
